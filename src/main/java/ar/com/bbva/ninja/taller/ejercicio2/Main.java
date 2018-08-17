@@ -3,10 +3,13 @@
  * 
  * 1. Tipos primitivos. Tipos referenciados.
  * 2. Clases y objetos: declaración, instanciación, inicialización.
- * 3. El método constructor.
- * 3. Herencia
- * 4. Propiedades, atributos, mensajes, métodos, variables y ámbitos
- * 5.
+ * 3. El método constructor. Diferentes constructores.
+ * 4. Herencia
+ * 5. Propiedades, atributos, mensajes, métodos, variables y ámbitos
+ * 6. Sobrecarga y sobreescritura de métodos.
+ * 7. Polimorfismo.
+ * 8. Encapsulación.
+ * 9.  
  * 
  * @version 1.0
  * @author fernando
@@ -17,6 +20,7 @@ package ar.com.bbva.ninja.taller.ejercicio2;
 
 public class Main {
 	
+	// FIXME: rehacer este método
 	public static void main(String[] args) {
 		Fraccion f1 = new Fraccion(1, 3);
 		Fraccion f2 = new Fraccion(2, 3);
@@ -50,8 +54,11 @@ public class Main {
 		System.out.println("Multiplicando una fraccion por un entero negativo: " + f9.multiplicar(-7));
 		System.out.println("Dividiendo entre fracciones: " + f10.dividir(f11));
 		
-		FraccionMixta fm1 = new FraccionMixta(1, 3, 4);
+		// TODO: revisar el tema de los negativos con los mixtos.
+		FraccionMixta fm1 = new FraccionMixta(8, 1, 4);
+		System.out.println(fm1);
 		
+		System.out.println(fm1.getFraccionImpropia());
 		
 	}
 }

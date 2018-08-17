@@ -10,11 +10,26 @@
 package ar.com.bbva.ninja.taller.ejercicio2;
 
 public class FraccionMixta extends Fraccion {
-	protected int entero; 
+	protected int entero;
+	
+	public FraccionMixta(int numerador, int denominador) {
+		super(numerador, denominador);
+		entero = numerador / denominador;
+		this.numerador = numerador % denominador;
+		this.denominador = denominador;
+	}
 
 	public FraccionMixta(int entero, int numerador, int denominador) {
 		super(numerador, denominador);
 		this.entero = entero;
+		
+		// Convierto la fracción mixta en una fracción impropia
+		numerador = (entero * denominador) + numerador;
+	}
+	
+	public Fraccion getFraccionImpropia() {
+		int numerador = (entero * denominador) + this.numerador;
+		return new Fraccion(numerador, denominador);
 	}
 
 	@Override
