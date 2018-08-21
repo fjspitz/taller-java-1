@@ -9,17 +9,21 @@
 
 package ar.com.bbva.ninja.taller.ejercicio2;
 
-public class FraccionMixta extends Fraccion {
+public class NumeroMixto extends Fraccion {
 	protected int entero;
 	
-	public FraccionMixta(int numerador, int denominador) {
+	public NumeroMixto(Fraccion fraccion) {
+		this(fraccion.numerador, fraccion.denominador);
+	}
+	
+	public NumeroMixto(int numerador, int denominador) {
 		super(numerador, denominador);
 		entero = numerador / denominador;
 		this.numerador = numerador % denominador;
 		this.denominador = denominador;
 	}
 
-	public FraccionMixta(int entero, int numerador, int denominador) {
+	public NumeroMixto(int entero, int numerador, int denominador) {
 		super(numerador, denominador);
 		this.entero = entero;
 		

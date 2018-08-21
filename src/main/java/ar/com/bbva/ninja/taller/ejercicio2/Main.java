@@ -55,10 +55,18 @@ public class Main {
 		System.out.println("Dividiendo entre fracciones: " + f10.dividir(f11));
 		
 		// TODO: revisar el tema de los negativos con los mixtos.
-		FraccionMixta fm1 = new FraccionMixta(8, 1, 4);
+		NumeroMixto fm1 = new NumeroMixto(8, 1, 4);
 		System.out.println(fm1);
-		
 		System.out.println(fm1.getFraccionImpropia());
+		
+		NumeroMixto fm2 = new NumeroMixto(-8, 1, 4);
+		System.out.println(fm2);
+		System.out.println(fm2.getFraccionImpropia());
+		
+		System.out.println(f8);
+		
+		NumeroMixto fm3 = new NumeroMixto(f8);
+		System.out.println(fm3);
 		
 	}
 }
